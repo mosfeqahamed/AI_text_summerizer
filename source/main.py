@@ -39,11 +39,25 @@ def extract_keywords(chats, top_n=5):
     keywords = [kw for kw, _ in keywords_scores]
     return keywords
 
+def conversation_topic(keywords):
+    topics = {
+        'python': ['python', 'code', 'programming', 'script', 'language'],
+        'machine learning': ['machine', 'learning', 'model', 'data', 'train', 'ai'],
+        'web development': ['web', 'html', 'css', 'javascript', 'server'],
+        'ai': ['ai', 'artificial', 'intelligence', 'neural', 'network', 'deep'],
+    }
+    for topic, keywords_list in topics.items():
+        if any(k in keywords for k in keywords_list):
+            return topic
+    return 'unknown'
+
 def generate_summary(chats):
     total = count_messages(chats)
     keywords = extract_keywords(chats)
+    topic = conversation_topic(keywords)
     summary = f"Summary:\n" \
               f"- The conversation had {total} exchanges.\n" \
+              f"- The user asked mainly about {topic}.\n" \
               f"- Most common keywords: {', '.join(keywords)}."
               
     return summary
