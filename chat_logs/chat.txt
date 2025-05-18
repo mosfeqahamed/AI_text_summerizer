@@ -1,0 +1,12 @@
+User: Hello!
+AI: Hi! How can I assist you today?
+User: Can you explain what machine learning is?
+AI: Certainly! Machine learning is a field of AI that allows systems to learn from data.
+User: What are the common algorithms used in machine learning?
+AI: Some common algorithms include linear regression, decision trees, and neural networks.
+User: Can you give examples of applications for machine learning?
+AI: Sure! Machine learning is used in image recognition, natural language processing, and recommendation systems.
+User: Thanks! That helps a lot.
+AI: You're welcome! Let me know if you have more questions.
+
+
