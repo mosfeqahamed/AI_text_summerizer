@@ -62,14 +62,27 @@ def generate_summary(chats):
               
     return summary
 
+def summarize_folder(folder_path):
+    summaries = {}
+    for filename in os.listdir(folder_path):
+        if filename.endswith('.txt'):
+            filepath = os.path.join(folder_path, filename)
+            chats = read_chat_log(filepath)
+            summary = generate_summary(chats)
+            summaries[filename] = summary
+    return summaries
 
 if __name__ == "__main__":
-    input_file = "chat_logs/chat.txt" 
+    input_dir = "chat_logs/"
 
-    if input_file:
-        try:
-            chats = read_chat_log(input_file)
-            print(f"Summary for file: {input_file}")
-            print(generate_summary(chats))
-        except FileNotFoundError:
-            print(f"Error: File '{input_file}' not found.")
+    if input_dir:
+        if not os.path.isdir(input_dir):
+            print(f"Error: Directory '{input_dir}' does not exist.")
+        else:
+            summaries = summarize_folder(input_dir)
+            if not summaries:
+                print(f"No .txt files found in directory '{input_dir}'.")
+            else:
+                for fname, summ in summaries.items():
+                    print(f"\nSummary for file: {fname}")
+                    print(summ)

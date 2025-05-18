@@ -1,0 +1,12 @@
+User: Hi there!
+AI: Hello! How can I help you today?
+User: What is Python used for?
+AI: Python is a versatile programming language used for web development, data analysis, AI, automation, and more.
+User: Can you explain what a function is in Python?
+AI: Sure! A function is a block of reusable code that performs a specific task.
+User: How do I define a function?
+AI: Use the `def` keyword followed by the function name and parentheses. For example: `def my_function():`.
+User: What are some popular Python libraries for data science?
+AI: Libraries like NumPy, Pandas, Matplotlib, and Scikit-learn are widely used in data science.
+User: Thank you for the information.
+AI: You're welcome! Feel free to ask if you have more questions.
