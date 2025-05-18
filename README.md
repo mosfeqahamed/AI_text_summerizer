@@ -25,11 +25,19 @@ git clone https://github.com/mosfeqahamed/AI_text_summerizer.git
 
 
 2. python -m venv project_env
-source project_env/bin/activate    # Linux/macOS
-project_env\Scripts\activate       # Windows 
 
-3. pip install -r requirements.txt
+for Linux user
 
-4. Run the script
+source project_env/bin/activate  
+
+or
+
+for windows user
+
+project_env\Scripts\activate      
+
+4. pip install -r requirements.txt
+
+5. Run the script
 
 python source/main.py
